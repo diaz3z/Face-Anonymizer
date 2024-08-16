@@ -6,7 +6,6 @@ mp_face_detection = mp_face_detection.FaceDetection()
 
 
 cap = cv2.VideoCapture(0)
-
 while True:
     ret, frame = cap.read()
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
