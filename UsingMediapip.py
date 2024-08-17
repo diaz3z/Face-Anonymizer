@@ -6,7 +6,6 @@ import numpy as np
 mp_face_detection = mp.solutions.face_detection
 mp_face_detection = mp_face_detection.FaceDetection()
 
-# Capture video 
 cap = cv2.VideoCapture(0)
 
 while True:
