@@ -2,11 +2,11 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-# Initialize face detection from MediaPipe
+
 mp_face_detection = mp.solutions.face_detection
 mp_face_detection = mp_face_detection.FaceDetection()
 
-# Capture video from the webcam
+# Capture video 
 cap = cv2.VideoCapture(0)
 
 while True:
