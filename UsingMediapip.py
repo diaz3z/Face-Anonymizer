@@ -16,7 +16,7 @@ while True:
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     
     # Process the frame to detect faces
-    results = mp_face_detection.process(
+    results = mp_face_detection.process(frame_rgb)
 
     if results.detections:
         # Loop through all detected faces
