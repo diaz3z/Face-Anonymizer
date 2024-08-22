@@ -12,7 +12,7 @@ while True:
     # Read a frame from the webcam
     ret, frame = cap.read()
     
-    # Convert the BGR frame to RGB
+    
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     
     # Process the frame to detect faces
