@@ -23,7 +23,12 @@ while True:
             axes = (w // 2, h // 2)
             angle = 0
 
-            cv2.ellipse(mask, center=center, axes=axes, angle=angle, 0, 360, (255, 255, 255), -1)
+            cv2.ellipse(mask, center,axes,angle, 0, 360, (255, 255, 255), -1)
             blurred_frame = cv2.GaussianBlur(frame, (99, 99), 30)
-            frame = np.when(mask == 255, blurred_frame, frame)
+            frame = np.where(mask == 255, blurred_frame, frame)
     cv2.imshow("fasdf", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
