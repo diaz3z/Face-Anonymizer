@@ -2,8 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-mp_face_detection = mp.solutions.face_detection
-mp_face_detection = mp_face_detection.FaceDetection()
+
 
 cap = cv2.VideoCapture(0)
 
