@@ -12,7 +12,7 @@ while True:
         blur = cv2.GaussianBlur(ROI, (99, 99),0)
         img[y:y+h, x:x+w] = blur
 
-    cv2.imshow("ting", img)
+    cv2.imshow("Haarcascade Classifier", img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 video.release()

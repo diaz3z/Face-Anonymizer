@@ -12,7 +12,6 @@ while True:
     # Read a frame from the webcam
     ret, frame = cap.read()
     
-    
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     
     # Process the frame to detect faces
@@ -27,25 +26,17 @@ while True:
             # Convert relative bounding box to absolute pixel values
             x, y, w, h = int(bboxC.xmin * iw), int(bboxC.ymin * ih), int(bboxC.width * iw), int(bboxC.height * ih)
             
-            # Create an elliptical mask
-            mask = np.zeros_like(frame, dtype=np.uint8)
+            # Extract the region of interest (ROI) for the face
+            face_roi = frame[y:y+h, x:x+w]
 
-            # Define the center, axes, and angle of the ellipse (oval shape)
-            center = (x + w // 2, y + h // 2)
-            axes = (w // 2, h // 2)
-            angle = 0
+            # Apply Gaussian blur to the face ROI
+            blurred_face = cv2.GaussianBlur(face_roi, (99, 99), 30)
 
-            # Draw the filled ellipse on the mask
-            cv2.ellipse(mask, center, axes, angle, 0, 360, (255, 255, 255), -1)
+            # Replace the original face region with the blurred face
+            frame[y:y+h, x:x+w] = blurred_face
 
-            # Apply Gaussian blur to the entire frame
-            blurred_frame = cv2.GaussianBlur(frame, (99, 99), 30)
-
-            # Combine the blurred face using the mask
-            frame = np.where(mask == 255, blurred_frame, frame)
-
-    # Display the frame with blurred oval faces
-    cv2.imshow("Face Blur", frame)
+    # Display the frame with blurred rectangular faces
+    cv2.imshow("Mediapipe", frame)
     
     # Exit the loop when 'q' is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
