@@ -58,6 +58,10 @@ python UsingMediapipe.py
 
 This scripts will open a window displaying your webcam feed, where any detected faces will be blurred. You can exit the program by pressing the "q" key.
 
+![Media Pipe](https://github.com/user-attachments/assets/b661d9f6-1286-426a-b5c5-04c463190a90)
+
+![Media Pipe](https://github.com/user-attachments/assets/c618dc26-9687-49f5-9b3f-94356726943b)
+
 ## Haar Cascade Classifier Implementation
 
 This method uses Haar Cascade Classifier to detect faces and apply Gaussian blur to the detected regions.
@@ -70,6 +74,10 @@ python haarcascadeclassifier.py
 ## Example Output
 
 This scripts will open a window displaying your webcam feed, where any detected faces will be blurred. You can exit the program by pressing the "q" key.
+
+![Harcascade Classifier](https://github.com/user-attachments/assets/667527f7-689d-454c-8837-718250b9ba8c)
+
+![Haarcascade Classifier](https://github.com/user-attachments/assets/1db64317-b4af-4381-a7e8-fbb28edaaf24)
 
 
 ## Contributing
