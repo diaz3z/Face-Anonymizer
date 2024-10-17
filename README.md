@@ -81,6 +81,7 @@ This scripts will open a window displaying your webcam feed, where any detected 
 
 
 
+
 ## Contributing
 
 Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/diaz3z/Face-Anonymizer/issues) if you want to contribute.
