@@ -80,7 +80,6 @@ This scripts will open a window displaying your webcam feed, where any detected 
 ![Haarcascade Classifier](https://github.com/user-attachments/assets/1db64317-b4af-4381-a7e8-fbb28edaaf24)
 
 
-
 ## Contributing
 
 Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/diaz3z/Face-Anonymizer/issues) if you want to contribute.
